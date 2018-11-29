@@ -1,0 +1,65 @@
+html{
+	min-height: 100%;
+}
+
+
+
+body{
+
+/*background: rgb(9,9,121);
+background: linear-gradient(180deg, rgba(9,9,121,0.3337710084033614) 0%, rgba(34,167,195,0.35057773109243695) 34%, rgba(34,195,145,0.3225665266106442) 100%);
+min-height: 100%;
+*/
+/*background: rgb(9,15,121);
+background: linear-gradient(180deg, rgba(9,15,121,0.4318102240896359) 0%, rgba(34,167,195,0.35057773109243695) 34%, rgba(34,195,145,0.3225665266106442) 100%);
+*/
+background: rgb(131,58,180);
+background: linear-gradient(0deg, #2A363b 0% , #e84A5f 44%, #ff847c 53%, #feceab 69%, #99b898 99%);
+    
+}
+
+
+.card-custom {
+  overflow: hidden;
+  min-height: 250px;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+}
+
+.card-custom-img {
+  height: 100px;
+  min-height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: inherit;
+}
+
+/* First border-left-width setting is a fallback */
+.card-custom-img::after {
+  position: absolute;
+  content: '';
+  top: 60px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-top-width: 40px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-left-width: 545px;
+  border-left-width: calc(575px - 5vw);
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-left-color: inherit;
+}
+
+.card-custom-avatar img {
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+  position: absolute;
+  top: 45px;
+  left: 1.25rem;
+  width: 70px;
+  height: 70px;
+}

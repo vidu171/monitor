@@ -1,0 +1,168 @@
+.mynav{
+    background-color: #263238;
+    color: rgb(253, 253, 253);
+}
+
+body {
+  background: #eee;
+  margin-top: 80px;
+}
+
+.brand_logo{
+    height: 2em;
+}
+
+
+.logo{
+    height: 10em;
+}
+
+.fa-plus-circle{
+    padding-top: 0.7em;
+    margin-left: 1em;
+}
+
+.fa-minus-circle{
+    padding-top: 0.7em;
+    margin-left: 1em;
+}
+.card {
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    perspective: 500px;
+    width: 16em;
+    height: 22em;
+    padding: 0%;
+    margin: 1.2em;
+    
+}
+
+.incard{
+    background-color: inherit;
+    height: 100%!important;
+    min-height: 100%!important;
+    padding: 2em;
+    text-align: center;
+}
+
+.destinations{
+    color : #C51162;
+    font-weight: bold;
+}
+
+
+.user_name{
+    color : #000000;
+    margin-top: 0.4em;
+    font-size: 1.2em;
+}
+.date{
+    font-size: 1.2em;
+    color: #000000e8;
+    margin: 0.5em;
+    margin-right: 1em;
+    margin-top: 2em;
+    font-weight: bolder;
+    position: relative;
+}
+.dest{
+    font-size: 1em;
+    color: white;
+    font-family: sans-serif;
+}
+.time{
+    font-size: 1em;
+    color: rgba(0, 0, 0, 0.644);
+    font-family: sans-serif;
+}
+.pickup{
+    color: #00E676;
+}
+.price{
+    color: #00E676;
+    font-size: 1.6em;
+    font-weight: bold;
+}
+
+.truck{
+    background-color: #eee;
+}
+
+.status{
+    width: 100%;
+    height: 2em;
+    color: white;
+}
+
+.review{
+    background-color: #FFD600;
+
+}
+
+.alloted{
+    background-color: #1976D2;
+    
+}
+
+.delivered{
+    background-color: #00E676;
+    
+}
+
+.holder{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(255, 255, 255);
+  }
+
+
+  .preloader {
+    position: absolute;
+    width: 10%;
+    height: 0%;
+    padding-bottom: 10%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+  .preloader div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    overflow: hidden;
+    animation: animatePreloader 1s infinite linear;
+    transform-origin: 50% 100%;
+  }
+  .preloader div:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #333;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+  .preloader div:nth-child(2) {
+    width: 60%;
+    height: 60%;
+    top: 20%;
+    animation: animatePreloader 0.5s infinite linear;
+  }
+  @keyframes animatePreloader {
+    0% {
+      transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) rotateZ(360deg);
+    }
+  
+    
+  }
