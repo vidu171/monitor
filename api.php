@@ -28,3 +28,5 @@ if ($conn->query($sql) === TRUE) {
 ?>
 
 <!-- 192.168.1.101/monitor/api.php?patent_id=1&temperature=92&heartbeat=64 -->
+
+<!-- http://localhost/monitor/api.php?patient_id=1&temperature=72&heartbeat=54 -->

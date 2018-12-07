@@ -10,12 +10,12 @@ body{
 background: linear-gradient(180deg, rgba(9,9,121,0.3337710084033614) 0%, rgba(34,167,195,0.35057773109243695) 34%, rgba(34,195,145,0.3225665266106442) 100%);
 min-height: 100%;
 */
-/*background: rgb(9,15,121);
+background: rgb(9,15,121);
 background: linear-gradient(180deg, rgba(9,15,121,0.4318102240896359) 0%, rgba(34,167,195,0.35057773109243695) 34%, rgba(34,195,145,0.3225665266106442) 100%);
-*/
-background: rgb(131,58,180);
+
+/*background: rgb(131,58,180);
 background: linear-gradient(0deg, #2A363b 0% , #e84A5f 44%, #ff847c 53%, #feceab 69%, #99b898 99%);
-    
+*/    
 }
 
 

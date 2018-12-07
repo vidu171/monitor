@@ -7,7 +7,7 @@
  */
 session_start();
 session_destroy();
-header('Location: ' . "/", true, ($permanent === true) ? 301 : 302);
+header('Location: ' . "./", true, ($permanent === true) ? 301 : 302);
 
 
 ?>

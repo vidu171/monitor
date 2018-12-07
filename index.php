@@ -26,10 +26,13 @@
 ?>
 
     <nav class="navbar navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">
-    <img src="./img/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+  <a class="navbar-brand" href="/">
+    <img src="./img/logo.png" width="30" height="30"  alt="">
     Wireless Patient Monitoring 
   </a>
+  <li class="nav-item">
+        <a class="nav-link" href="./logout.php"> Logout</a>
+    </li>
 </nav>
 
 
@@ -67,7 +70,7 @@
         <div class="card card-custom bg-white border-white border-0 col-md-5">
             <div class="container">
                 </br>
-            <h3>Patent 1</h3>
+            <h3>Patient 1</h3>
             <canvas id="myChart" width="400" height="300" ></canvas>
                 <br>
             </div>
@@ -76,13 +79,13 @@
         <div class="card card-custom bg-white border-white border-0 col-md-5"">
             <div class="container">
                 <br>
-            <h3>Patent 2</h3>
+            <h3>Patient 2</h3>
             <canvas id="myChart2" width="400" height="300" ></canvas>
                 <br>
             </div>
         </div>
-
     </div>
+    
 </div>
 </br>
 </br>
@@ -98,13 +101,13 @@
     while ($datarow = mysqli_fetch_array($dataset,MYSQLI_ASSOC)) {
         // print_r($datarow);
         $tmp = explode(" ",$datarow['time'])[1];
-        echo explode(":",$tmp)[0];
+        // echo explode(":",$tmp)[0];
         // echo $tmp;
 
 ?>
 
         <script type="text/javascript">
-            var str = <?php echo explode(":",$tmp)[0] ?> +" "+ <?php echo  explode(":",$typemp)[1] ?>;
+            var str = <?php echo explode(":",$tmp)[0] ?> +" "+ <?php echo  explode(":",$tmp)[1] ?>;
             console.log(str);
             Patent_1_temp.push(<?php echo $datarow['temperature']; ?>);
             Patent_1_Oxygen.push(<?php echo $datarow['heartbeat'];?>);
@@ -206,6 +209,74 @@ var myChart = new Chart(ctx, {
     }
 });
 </script>
+<div class="container">
+<br>
+    <div class="row">
+        <div class="col-md-2"></div>
+        <div class="card card-custom bg-white border-white border-0 col-md-8">
+            <br>
+            <b>Patient 1</b>
+            <div class="container">
+                <table class="table table-striped table-bordered">
+                    <thead>
+            <tr>
+                <th>Time</th>
+                <th>Heartbeat</th>
+                <th>Temprature</th>
+            </tr>
+        </thead>
+         <tbody>
+        <?php
+        $dataset   = mysqli_query($mysqli, "SELECT * FROM data WHERE patent_Id = '1'");
+        while ($datarow = mysqli_fetch_array($dataset,MYSQLI_ASSOC)) {
+            echo "<tr>";
+            echo "<td>" . $datarow['time'] . "</td>";
+            echo "<td>" . $datarow['heartbeat'] . "</td>";
+            echo "<td>" . $datarow['temperature'] . "</td>";
+            echo "</tr>";
+            }
+        ?>    
+        </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="row">
+
+        <div class="col-md-2"></div>
+        <div class="card card-custom bg-white border-white border-0 col-md-8">
+            <br><b>Patient 2</b>
+            <div class="container">
+                <table class="table table-striped table-bordered">
+                    <thead>
+            <tr>
+                <th>Time</th>
+                <th>Heartbeat</th>
+                <th>Temprature</th>
+            </tr>
+        </thead>
+         <tbody>
+        <?php
+        $dataset   = mysqli_query($mysqli, "SELECT * FROM data WHERE patent_Id = '2'");
+        while ($datarow = mysqli_fetch_array($dataset,MYSQLI_ASSOC)) {
+            echo "<tr>";
+            echo "<td>" . $datarow['time'] . "</td>";
+            echo "<td>" . $datarow['heartbeat'] . "</td>";
+            echo "<td>" . $datarow['temperature'] . "</td>";
+            echo "</tr>";
+            }
+        ?>    
+        </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <br>
 </body>
 
 </html>
